@@ -1,0 +1,123 @@
+.post {
+  background: var(--gray-800);
+  padding: 2.5rem;
+  border-radius: .5rem;
+}
+
+.post > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post > header time {
+  color: var(--gray-400);
+  font-size: .875rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorInfo strong {
+  display: block;
+  color: var(--gray-100);
+  line-height: 1.6;
+}
+
+.authorInfo span {
+  display: block;
+  color: var(--gray-400);
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.avatar {
+  width: calc(3rem + .75rem);
+  height: calc(3rem + .75rem);
+  border-radius: .5rem;
+  border: .25rem solid var(--gray-800);
+  outline: .12rem solid var(--green-500);
+}
+
+.post + .post {
+  margin-top: 2rem;
+}
+
+.content {
+  color: var(--gray-300);
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+.content p {
+  margin-top: 1rem;
+}
+
+.content a {
+  color: var(--green-500);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: var(--green-300);
+}
+
+.commentForm {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-top: .06rem solid var(--gray-600);
+}
+
+.commentForm > strong {
+  color: var(--gray-100);
+  line-height: 1.6;
+}
+
+.commentForm textarea {
+  width: 100%;
+  height: 6rem;
+  background: var(--gray-900);
+  color: var(--gray-100);
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: .5rem;
+  line-height: 1.4;
+  resize: none;
+}
+
+.commentForm textarea:focus {
+  color: var(--gray-300);
+  outline: .06rem solid var(--green-500);
+}
+
+.commentForm footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: none;
+}
+
+.commentForm button[type=submit] {
+  background: var(--green-500);
+  color: var(--white);
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: .5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .4s ease;
+}
+
+.commentForm button[type=submit]:hover {
+  background: var(--green-300);
+}
