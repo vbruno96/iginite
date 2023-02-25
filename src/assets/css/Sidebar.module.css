@@ -17,14 +17,6 @@
   margin-top: calc(0rem - 1.5rem - .375rem)
 }
 
-.avatar {
-  width: calc(3rem + .75rem);
-  height: calc(3rem + .75rem);
-  border-radius: .5rem;
-  border: .25rem solid var(--gray-800);
-  outline: .12rem solid var(--green-500);
-}
-
 .profile strong {
   color: var(--gray-100);
   margin-top: 1rem;
