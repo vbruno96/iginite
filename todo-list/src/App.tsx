@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react"
 import { PlusCircle } from "phosphor-react"
 import { Header } from "./components/Header"
+import { EmptyTodos } from "./components/EmptyTodos"
 
 interface TypeTodos {
   id: number
@@ -39,6 +40,7 @@ function App() {
             <span>0</span>
           </div>
         </div>
+        <EmptyTodos />
       </div>
     </>
   )
