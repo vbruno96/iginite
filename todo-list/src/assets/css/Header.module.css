@@ -1,0 +1,24 @@
+.header {
+  background: var(--grey-700);
+  height: 12.5rem;
+  padding: 4.5rem 0 5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.logo > strong {
+  color: var(--blue);
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 900;
+}
+
+.logo > strong span {
+  color: var(--purple-dark);
+}
