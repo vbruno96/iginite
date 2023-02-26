@@ -5,17 +5,18 @@ import { TypeTodos } from './TodoList'
 
 interface TodoProps {
   data: TypeTodos,
-  handleToggleTodo: (idTodo: number) => void
+  onToggleTodo: (idTodo: string) => void
+  onDeleteTodo: (idTodo: string) => void
 }
 
-export function Todo({data: todo, handleToggleTodo}: TodoProps) {
+export function Todo({data: todo, onToggleTodo, onDeleteTodo}: TodoProps) {
   
   return (
     <div className={styles.todo}>
       <Checkbox.Root
       className={`${styles.checkboxWrapper} ${todo.isCompleted && styles.checked}`}
         checked={todo.isCompleted}
-        onCheckedChange={() => handleToggleTodo(todo.id)}
+        onCheckedChange={() => onToggleTodo(todo.id)}
       >
         <div className={styles.checkbox}>
           <Checkbox.Indicator>
@@ -24,7 +25,7 @@ export function Todo({data: todo, handleToggleTodo}: TodoProps) {
         </div>
         <p>{todo.name}</p>
       </Checkbox.Root>
-      <button>  
+      <button onClick={() => onDeleteTodo(todo.id)}>  
         <Trash />
       </button>
     </div>
