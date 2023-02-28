@@ -21,7 +21,7 @@ export function Countdown() {
       interval = setInterval(() => {
         const secondsDifference = differenceInSeconds(
           new Date(),
-          activeCycle.startDate,
+          new Date(activeCycle.startDate),
         )
 
         if (secondsDifference >= totalSeconds) {
@@ -48,8 +48,6 @@ export function Countdown() {
 
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
 
-  console.log(currentSeconds)
-
   const minutesAmount = Math.floor(currentSeconds / 60)
   const secondsAmount = currentSeconds % 60
 
@@ -60,6 +58,7 @@ export function Countdown() {
     if (activeCycle) {
       document.title = `${minutes}:${seconds}`
     }
+    document.title = 'Ignite Timer'
   }, [minutes, seconds, activeCycle])
 
   return (
